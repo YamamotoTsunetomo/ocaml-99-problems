@@ -1,3 +1,3 @@
 # oCaml 99 problems
 
-25/99 solved
+26/99 solved

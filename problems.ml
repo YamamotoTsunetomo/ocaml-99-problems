@@ -204,3 +204,8 @@ let permutation lst =
     rand_select lst (length lst)
 
 (* 26. Generate the combinations of K distinct objects chosen from the N elements of a list. (medium) *)
+let rec extract k lst = 
+    if k <= 0 then [[]]
+    else match lst with
+        | [] -> []
+        | h::t -> (List.map(fun x -> h::x) (extract (k-1) t)) (@ extract k t)
